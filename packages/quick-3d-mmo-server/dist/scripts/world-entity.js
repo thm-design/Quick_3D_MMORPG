@@ -145,7 +145,7 @@ class WorldEntity {
         var _a, _b, _c, _d;
         if (((_c = (_b = (_a = this === null || this === void 0 ? void 0 : this.characterDefinition_) === null || _a === void 0 ? void 0 : _a.stats) === null || _b === void 0 ? void 0 : _b.health) !== null && _c !== void 0 ? _c : -1) <= 0) {
             console.log("Deadman attacked, this");
-            debugger;
+            // debugger;
             return;
         }
         // wheee hardcoded :(
@@ -175,7 +175,7 @@ class WorldEntity {
             console.log((_d = this === null || this === void 0 ? void 0 : this.characterDefinition_) === null || _d === void 0 ? void 0 : _d.name, ' attacking: ' + target.characterDefinition_.name);
             if (this.characterDefinition_.attack.type == ATTACK_TYPES.MELEE) {
                 damage = (this.stats_.strength / 5.0);
-                // TS hack. Should move this definition up. 
+                // TS hack. Should move this definition up.
                 const equipped = this.characterInfo_.inventory['inventory-equip-1'];
                 const weaponsData = WEAPONS_DATA;
                 if (equipped) {

@@ -2,7 +2,7 @@ class EntityManager {
   _ids: number;
   _entitiesMap: {};
   _entities: any[];
-  
+
   constructor() {
     this._ids = 0;
     this._entitiesMap = {};
@@ -33,7 +33,7 @@ class EntityManager {
     this._entities.push(e);
 
     e.SetParent(this);
-    
+
     e.InitEntity();
   }
 
@@ -61,7 +61,7 @@ class EntityManager {
     for (let i = 0; i < this._entities.length; ++i) {
 
       const e = this._entities[i];
-      debugger;
+      // debugger;
       e.Update(timeElapsed);
 
       if (e.dead_) {

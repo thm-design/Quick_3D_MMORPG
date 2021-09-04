@@ -369,7 +369,7 @@ class BasicCharacterController {
     this.position_.copy(controlObject.position);
     this.quaternion_.copy(controlObject.quaternion);
 
-    this.target_.Update(timeInSeconds); 
+    this.target_.Update(timeInSeconds);
   }
 };
 
@@ -1145,7 +1145,7 @@ class BasicMMODemo {
       transports: ['websocket'],
     });
 
-    // The socket.io TS definition is wrong I think. This is a hack. 
+    // The socket.io TS definition is wrong I think. This is a hack.
     (this.socket_ as any).on(EVENT_TYPES.CONNECT, () => {
       console.log("BasicMMODemo.socket_.on: ", EVENT_TYPES.CONNECT);
       const randomName = this.GenerateRandomName_();
@@ -1168,7 +1168,7 @@ class BasicMMODemo {
 
   OnMessage_(e, d) {
     if (e == EVENT_TYPES.WORLD_PLAYER) {
-      debugger;
+      // debugger;
       this.playerID_ = d.id;
       const e = new PlayerEntity({
         scene: this.scene_,

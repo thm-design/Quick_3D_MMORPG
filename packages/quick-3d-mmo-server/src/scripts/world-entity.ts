@@ -179,7 +179,7 @@ class WorldEntity {
   OnActionAttack_Fired() {
     if((this?.characterDefinition_?.stats?.health ?? -1) <= 0) {
       console.log("Deadman attacked, this")
-      debugger;
+      // debugger;
       return;
     }
     // wheee hardcoded :(
@@ -218,7 +218,7 @@ class WorldEntity {
 
       if (this.characterDefinition_.attack.type == ATTACK_TYPES.MELEE) {
         damage = (this.stats_.strength / 5.0);
-        // TS hack. Should move this definition up. 
+        // TS hack. Should move this definition up.
         const equipped = this.characterInfo_.inventory['inventory-equip-1'] as string;
         const weaponsData = WEAPONS_DATA as { [key: string]: any };
 
